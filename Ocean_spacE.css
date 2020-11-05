@@ -1,0 +1,87 @@
+/* Ocean_spacE.css */
+
+html
+{   
+    display: flex;
+    /* background-image: */
+        /* linear-gradient(rgba(255, 0, 255, 0.404), rgba(255, 255, 0, 0.5)),  */
+        /* url('Shaka-triggaman.jpg');  */
+}
+
+body
+{  
+    background-image: url('Shaka-triggaman.jpg');
+    width: 100%;
+    flex-basis: 100%;
+    font: "Arial", 100; 
+    height: 100%;
+}
+
+p
+{
+    background-color: red;
+    font: 'TimesNewRoman', outline;
+    color: whitesmoke;
+    border: 1px palegoldenrod solid;
+    text-align: center;
+}
+.notclicked
+{
+ 
+    font: 'TimesNewRoman', outline;
+    color: whitesmoke; 
+}
+.clicked
+{
+    background-color: purple ;
+    color: gold;
+}
+div
+{
+    background-color: black ;
+}
+
+h1
+{
+    color: aqua;
+}
+
+h3
+{
+    color: green;
+}
+
+h2
+{    
+    text-align: center;
+    color: blue;
+}
+.container1
+{
+    display: flex;
+    
+}
+
+.about
+{
+    
+    
+    border: 1px #ccc solid;
+    padding: 10px;
+    flex: 1;
+}
+
+.mainpage
+{
+    text-align: center;
+}
+
+#Math
+{
+    background-image: url('LASTTYME.jpg');
+}
+
+#Losers
+{
+    background-image: url('Shaka-Madlooks.jpg')
+}
