@@ -2,21 +2,60 @@
   <head>
     <title>Antigravity</title>
     <meta charset="utf-8">
-    <link rel="icon" type="image/x-icon" href="./favicon.png">
     <link rel="stylesheet" href="https://pyscript.net/alpha/pyscript.css" />
     <script defer src="https://pyscript.net/alpha/pyscript.js"></script>
   </head>
   <py-env>
+- matplotlib
+- numpy
 - paths:
-  - ../python/bigShaka.py
+    - ../python/bigShaka.py
+
   </py-env>
   <body>
     <b>Based on Joe.</b>
-    <py-script>
-import bigShaka
-<!-- antigravity = antigravity -->
 
-print("Antigravity")
+    <form action="">
+      <input id="f" type="submit" value="text">
+      <button type="submit">submit</button>
+
+      <p id="flex"></p>
+    </form>
+    <py-script>
+      <!-- import bigShaka as bs -->
+      import numpy as np
+      import matplotlib.pyplot as plt
+      from js import document, DOMParser, setInterval
+      import bigShaka as bs
+
+      fig = plt.figure()
+    
+      v = bs.vector(1,2,3)
+      <!-- print(v.toStr())
+      fig -->
+      a = document.getElementById('flex')
+      a.innerHTML = v.toStr()
+
+      
+
+      ax = plt.axes(projection='3d')
+
+      # Data for a three-dimensional line
+      zline = np.linspace(0, 15, 1000)
+      xline = np.sin(zline)
+      yline = np.cos(zline)
+      ax.plot3D(xline, yline, zline, 'gray')
+
+      # Data for three-dimensional scattered points
+      zdata = 15 * np.random.random(100)
+      xdata = np.sin(zdata) + 0.1 * np.random.randn(100)
+      ydata = np.cos(zdata) + 0.1 * np.random.randn(100)
+      ax.scatter3D(xdata, ydata, zdata, c=zdata, cmap='Greens');
+              
+              
+              
+              
+      print("Antigravity")
     </py-script>
   </body>
 </html>
